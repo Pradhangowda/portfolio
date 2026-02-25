@@ -15,7 +15,7 @@ function Hero() {
           <div className="hero-text">
             <p className="hero-greeting">Hi Everyone!</p>
             <h1 className="hero-title">
-              I'm <span className="highlight">Pradhan</span>
+              I'm <span className="highlight">Pradhan S</span>
             </h1>
             <div className="social-icons">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
