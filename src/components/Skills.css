@@ -1,0 +1,186 @@
+.skills {
+  background: #0a0a0a;
+  padding: 10px 0 80px 0;
+  scroll-margin-top: 10px;
+}
+
+.skills-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-section {
+  margin-bottom: 60px;
+}
+
+.skills-section:last-child {
+  margin-bottom: 0;
+}
+
+.skills-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 40px 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 12px;
+}
+
+.skills-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.skills-section.animate .skill-card:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.skills-section.animate .skill-card:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.skill-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4caf50;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.skill-list li {
+  color: #a0a0a0;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.skill-list li::before {
+  content: '•';
+  color: #4caf50;
+  position: absolute;
+  left: 0;
+}
+
+.hackathon-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.skills-section.animate .hackathon-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.hackathon-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4caf50;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hackathon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hackathon-list li {
+  color: #a0a0a0;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.hackathon-list li:last-child {
+  margin-bottom: 0;
+}
+
+.hackathon-list li::before {
+  content: '•';
+  color: #4caf50;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 600px) {
+  .skills {
+    padding: 60px 0;
+  }
+
+  .skills-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .skill-card,
+  .hackathon-card {
+    padding: 24px;
+  }
+
+  .skill-card-title,
+  .hackathon-card-title {
+    font-size: 16px;
+  }
+
+  .skill-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-list li,
+  .hackathon-list li {
+    font-size: 14px;
+  }
+}

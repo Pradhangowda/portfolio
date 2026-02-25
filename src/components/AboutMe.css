@@ -1,0 +1,244 @@
+.about {
+  background: #0a0a0a;
+  padding: 0 0 80px 0;
+  scroll-margin-top: 10px;
+}
+
+.about-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 40px 0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 12px;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+
+.about-content {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text {
+  color: #a0a0a0;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-section {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.timeline-column {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.timeline-section.animate .timeline-column:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.timeline-section.animate .timeline-column:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.timeline-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 30px 0;
+  text-align: center;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.timeline-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #4caf50;
+  border-radius: 2px;
+}
+
+.simple-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.simple-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 2px;
+  height: calc(100% - 82px);
+  background: #4caf50;
+}
+
+.simple-timeline.animate::after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #4caf50;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50;
+  animation: moveDot 2s ease-out forwards;
+}
+
+@keyframes moveDot {
+  0% {
+    top: 4px;
+  }
+  100% {
+    top: calc(100% - 70px);
+  }
+}
+
+.simple-timeline-item {
+  padding-left: 20px;
+  border-left: 2px solid #4caf50;
+  position: relative;
+}
+
+.simple-timeline-item:first-child {
+  border-left: 2px solid transparent;
+}
+
+.simple-timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.simple-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background: #1a1a1a;
+  border: 2px solid #4caf50;
+  border-radius: 50%;
+}
+
+.simple-year {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4caf50;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.simple-institution {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.simple-degree {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 20px 0 60px 0;
+  }
+
+  .about-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .about-content {
+    padding: 24px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .timeline-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .timeline-column {
+    padding: 24px;
+  }
+
+  .timeline-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .simple-timeline {
+    gap: 20px;
+  }
+
+  .simple-institution {
+    font-size: 15px;
+  }
+
+  .simple-degree {
+    font-size: 13px;
+  }
+}
