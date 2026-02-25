@@ -35,7 +35,7 @@ function AboutMe() {
     },
     {
       id: 2,
-      institution: 'ACS Ind PU College',
+      institution: 'ASC PU College',
       degree: 'Class XII (State-Board)',
       year: '2021-2022'
     },
