@@ -6,6 +6,7 @@ function Hero() {
     { name: 'IoT', color: '#2196f3', id: 'project-iot' },
     { name: 'Robotics', color: '#4caf50', id: 'project-robotics' },
     { name: 'Aerospace', color: '#9c27b0', id: 'project-aerospace' },
+    { name: 'Web Development', color: '#00bcd4', id: 'project-portfolio' },
   ]
 
   return (
