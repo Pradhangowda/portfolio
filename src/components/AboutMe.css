@@ -226,7 +226,7 @@
   }
 
   .simple-timeline::before {
-    height: calc(100% - 50px);
+    height: calc(100% - 80px);
   }
 
   @keyframes moveDot {
