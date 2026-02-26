@@ -225,6 +225,19 @@
     gap: 20px;
   }
 
+  .simple-timeline::before {
+    height: calc(100% - 50px);
+  }
+
+  @keyframes moveDot {
+    0% {
+      top: 4px;
+    }
+    100% {
+      top: calc(100% - 60px);
+    }
+  }
+
   .simple-institution {
     font-size: 15px;
   }
