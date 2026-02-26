@@ -23,6 +23,8 @@ function AboutMe() {
 
     if (contentRef.current) observer.observe(contentRef.current)
     if (timelineSectionRef.current) observer.observe(timelineSectionRef.current)
+    if (educationRef.current) observer.observe(educationRef.current)
+    if (experienceRef.current) observer.observe(experienceRef.current)
 
     return () => observer.disconnect()
   }, [])
