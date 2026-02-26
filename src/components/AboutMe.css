@@ -126,7 +126,7 @@
   left: 0;
   top: 4px;
   width: 2px;
-  height: calc(100% - 28px);
+  height: calc(100% - 24px);
   background: #4caf50;
 }
 
@@ -134,12 +134,13 @@
   content: '';
   position: absolute;
   left: -4px;
+  top: 4px;
   width: 10px;
   height: 10px;
   background: #4caf50;
   border-radius: 50%;
   box-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50;
-  animation: moveDot 3s ease-out forwards;
+  animation: moveDot 2s ease-out forwards;
 }
 
 @keyframes moveDot {
@@ -147,7 +148,7 @@
     top: 4px;
   }
   100% {
-    top: calc(100% - 10px);
+    top: calc(100% - 24px);
   }
 }
 
