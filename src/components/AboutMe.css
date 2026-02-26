@@ -117,16 +117,15 @@
   flex-direction: column;
   gap: 24px;
   position: relative;
-  padding-left: 20px;
 }
 
 .simple-timeline::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 8px;
   width: 2px;
-  height: calc(100% - 24px);
+  height: calc(100% - 40px);
   background: #4caf50;
 }
 
@@ -148,18 +147,28 @@
     top: 4px;
   }
   100% {
-    top: calc(100% - 24px);
+    top: calc(100% - 36px);
   }
 }
 
 .simple-timeline-item {
+  padding-left: 20px;
+  border-left: 2px solid #4caf50;
   position: relative;
+}
+
+.simple-timeline-item:first-child {
+  border-left: 2px solid transparent;
+}
+
+.simple-timeline-item:last-child {
+  border-left: 2px solid transparent;
 }
 
 .simple-timeline-item::before {
   content: '';
   position: absolute;
-  left: -26px;
+  left: -6px;
   top: 4px;
   width: 10px;
   height: 10px;
