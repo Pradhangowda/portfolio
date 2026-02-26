@@ -133,7 +133,7 @@
 .simple-timeline.animate::after {
   content: '';
   position: absolute;
-  left: -6px;
+  left: -29px;
   top: 4px;
   width: 14px;
   height: 14px;
