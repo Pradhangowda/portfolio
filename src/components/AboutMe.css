@@ -234,7 +234,7 @@
       top: 4px;
     }
     100% {
-      top: calc(100% - 85px);
+      top: calc(100% - 90px);
     }
   }
 
