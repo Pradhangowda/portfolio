@@ -123,9 +123,9 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 4px;
   width: 2px;
-  height: calc(100% - 40px);
+  height: calc(100% - 28px);
   background: #4caf50;
 }
 
@@ -147,7 +147,7 @@
     top: 4px;
   }
   100% {
-    top: calc(100% - 40px);
+    top: calc(100% - 28px);
   }
 }
 
