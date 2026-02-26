@@ -123,19 +123,19 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 16px;
+  top: 8px;
   width: 2px;
-  height: calc(100% - 82px);
+  height: calc(100% - 40px);
   background: #4caf50;
 }
 
 .simple-timeline.animate::after {
   content: '';
   position: absolute;
-  left: -5px;
-  top: 0;
-  width: 12px;
-  height: 12px;
+  left: -4px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
   background: #4caf50;
   border-radius: 50%;
   box-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50;
@@ -147,7 +147,7 @@
     top: 4px;
   }
   100% {
-    top: calc(100% - 70px);
+    top: calc(100% - 36px);
   }
 }
 
