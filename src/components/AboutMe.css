@@ -147,7 +147,7 @@
     top: 4px;
   }
   100% {
-    top: calc(100% - 14px);
+    top: calc(100% - 10px);
   }
 }
 
