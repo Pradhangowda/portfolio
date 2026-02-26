@@ -124,14 +124,23 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 9px;
   width: 2px;
-  height: calc(100% - 28px);
+  height: calc(100% - 70px);
   background: #4caf50;
 }
 
 .simple-timeline.animate::after {
-  display: none;
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background: #4caf50;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50;
+  animation: moveDot 2s ease-out forwards;
 }
 
 @keyframes moveDot {
@@ -139,7 +148,7 @@
     top: 4px;
   }
   100% {
-    top: calc(100% - 10px);
+    top: calc(100% - 72px);
   }
 }
 
