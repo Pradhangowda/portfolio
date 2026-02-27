@@ -26,6 +26,10 @@ function GetInTouch() {
       <div className="get-in-touch-container">
         <h2 className="get-in-touch-title">Get In Touch</h2>
         <div ref={contentRef} className="contact-content">
+          <div className="contact-profile-wrapper">
+            <img src="/pradhan.png" alt="Pradhan" className="contact-profile-img" />
+            <span className="contact-tooltip">Hi!</span>
+          </div>
           <div className="contact-info">
             <div className="contact-item">
               <i className="fas fa-envelope contact-icon"></i>
