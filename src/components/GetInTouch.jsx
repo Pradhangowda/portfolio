@@ -1,8 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './GetInTouch.css'
 
 function GetInTouch() {
   const contentRef = useRef(null)
+  const [instagramState, setInstagramState] = useState(0)
+
+  const handleInstagramClick = (e) => {
+    if (instagramState === 0) {
+      e.preventDefault()
+      setInstagramState(1)
+    } else if (instagramState === 1) {
+      e.preventDefault()
+      setInstagramState(2)
+    } else if (instagramState === 2) {
+      e.preventDefault()
+      setInstagramState(3)
+    } else if (instagramState === 3) {
+      setInstagramState(0)
+    }
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,8 +83,9 @@ function GetInTouch() {
               href="https://www.instagram.com/pradhan.gow_da.04?igsh=ejhhaWF1ZXpxZ25k&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
-              className="social-link"
+              className={`social-link instagram-link ${instagramState === 1 ? 'pos-left' : ''} ${instagramState === 2 ? 'pos-right' : ''} ${instagramState === 0 || instagramState === 3 ? 'pos-original' : ''}`}
               aria-label="Instagram"
+              onClick={handleInstagramClick}
             >
               <i className="fab fa-instagram"></i>
             </a>

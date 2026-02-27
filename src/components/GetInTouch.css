@@ -47,21 +47,54 @@
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  position: relative;
 }
 
-.contact-profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #4caf50;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+.profile-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-profile-wrapper {
   position: relative;
   display: inline-block;
+}
+
+.contact-profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4caf50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.instagram-link {
+  position: relative;
+}
+
+.instagram-link.pos-original {
+  position: relative;
+}
+
+.instagram-link.pos-left {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 100px);
+}
+
+.instagram-link.pos-right {
+  position: absolute;
+  top: 40px;
+  right: calc(50% - 100px);
+}
+
+.contact-profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
 }
 
 .contact-tooltip {
@@ -94,11 +127,6 @@
 .contact-profile-wrapper:hover .contact-tooltip {
   transform: scale(1);
   opacity: 1;
-}
-
-.contact-profile-img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
 }
 
 .contact-content.animate {
@@ -146,6 +174,7 @@
 .social-links {
   display: flex;
   gap: 24px;
+  position: relative;
 }
 
 .social-link {
@@ -161,12 +190,36 @@
   font-size: 24px;
   text-decoration: none;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .social-link:hover {
   background: #4caf50;
   border-color: #4caf50;
-  transform: translateY(-4px);
+}
+
+.instagram-link {
+  position: relative;
+}
+
+.instagram-link.pos-original {
+  position: relative;
+}
+
+.instagram-link.pos-left {
+  position: fixed;
+  top: 35%;
+  left: calc(50% - 90px);
+  transform: translate(-100%, -50%);
+  z-index: 100;
+}
+
+.instagram-link.pos-right {
+  position: fixed;
+  top: 35%;
+  right: calc(50% - 90px);
+  transform: translate(100%, -50%);
+  z-index: 100;
 }
 
 @media (max-width: 600px) {
@@ -177,6 +230,21 @@
 
   .contact-content {
     padding: 30px 20px;
+  }
+
+  .contact-profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .instagram-link.pos-left {
+    top: 35%;
+    left: calc(50% - 70px);
+  }
+
+  .instagram-link.pos-right {
+    top: 35%;
+    right: calc(50% - 70px);
   }
 
   .contact-link {
